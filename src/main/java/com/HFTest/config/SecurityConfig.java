@@ -9,27 +9,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
-
-//	@Autowired
-//	private UserDetailsService userDetailsService;
-	
-	
-//	 @Bean
-//	  public FilterRegistrationBean corsFilter() {
-//	    final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//	    CorsConfiguration config = new CorsConfiguration();
-//	    config.setAllowCredentials(true);
-//	    config.addAllowedOrigin("http://localhost:8080"); // @Value: http://localhost:8080
-//	    config.addAllowedHeader("*");
-//	    config.addAllowedMethod("*");
-//	    source.registerCorsConfiguration("/**", config);
-//	    FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
-//	    bean.setOrder(0);
-//	    return bean;
-//	  }
-
-	
-	
 	
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception{
@@ -47,18 +26,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		httpSecurity.headers().frameOptions().disable();
 		
 	}
-	
-//	@Autowired
-//	public void configure(AuthenticationManagerBuilder auth) throws Exception {
-//
-//		auth.userDetailsService(userDetailsService);
-		
-//		auth.inMemoryAuthentication()
-//			.withUser("yushiki").password("password").roles("USER")
-//			.and()
-//			.withUser("ayoub").password("password").roles("USER", "ADMIN");
-//	}
-	
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {

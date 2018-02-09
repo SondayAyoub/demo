@@ -141,20 +141,5 @@ public class UserServiceImpl implements UserService {
 		userRepository.save(assign_user);
 		return true;
 	}
-	
-	
-	
-	
-//	@Override
-//	public void save(User user) {
-//		user.setPassword(user.getPassword());
-//		user.setRoles(new HashSet<Role>(roleRepository.findAll()));
-//		userRepository.save(user);
-//	}
-//
-//	@Override
-//	public User findByEmail(String email) {
-//		return userRepository.findByEmail(email);
-//	}
 
 }

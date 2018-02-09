@@ -132,15 +132,6 @@ public class User implements UserDetails{
 		this.password = password;
 	}
 	
-//	@Transient
-//	public Set<Permission> getPermission(){
-//		Set<Permission> permissions = new HashSet<Permission>();
-//		for(Role role : roles) {
-//			permissions.addAll(role.getPermissions());
-//		}
-//		return permissions;
-//	}
-	
 	@Override
 	public String toString() {
 		return "User [email=" + email + ", creationDate=" + creationDate + ", lastAccessDate=" + lastAccessDate
@@ -150,12 +141,9 @@ public class User implements UserDetails{
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
-		System.out.println("dkhaal");
 		Set<Role> r = getRoles();
 		if (r != null)
 			authorities.addAll(r);
-		System.out.println("dkhaal 2");
-//		authorities.addAll(getPermission());
 		return authorities;
 	}
 

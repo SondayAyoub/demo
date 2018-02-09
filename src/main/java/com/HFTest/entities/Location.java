@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 public class Location implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private String type;
 	private double[] coordinates;
@@ -25,7 +22,6 @@ public class Location implements Serializable{
 	}
 	public Location() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public Location(String type, double[] coordinates) {
 		super();
